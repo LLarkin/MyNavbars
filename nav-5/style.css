@@ -1,0 +1,164 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+		transition: 1s;
+
+}
+
+.header-section{
+	min-height:100vh;
+	width: 100%;
+	background: url("back2.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#check{
+	display: none;
+}
+
+.logo{
+	font-family: 'Stick No Bills', sans-serif;
+	min-width: 200px;
+	min-height: 100px;
+
+	display: inline-block;
+	color: white;
+	display: flex;
+	align-items: center;
+	max-width: 200px;
+	justify-content: space-around;
+	margin-left: 2vw;
+}
+
+
+
+@keyframes logo{
+	0%{
+		transform: rotate(0deg);
+	}
+	20%{
+		transform: rotate(150deg);
+	}
+	40%{
+		transform: rotate(75deg);
+	}
+	60%{
+		transform: rotate(0deg);
+	}
+	80%{
+		transform: rotate(-50deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+
+
+.logo i{
+	font-size: 60px;
+	animation: logo 10s infinite ease-in-out;
+}
+
+.logo h1{
+	font-size: 35px;
+	padding-left: 4px;
+	width: 60%;
+}
+
+#label{
+	color: white;
+	font-size: 50px;
+	display: none;
+	position: absolute;
+	top: 3vh;
+	right: 3vw;
+}
+
+#label:hover{
+	transform: rotate(90deg);
+}
+
+#close{
+	display: none;
+}
+.nav{
+	width: 100%;
+	height: 15vh;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.navul{
+	width: 50%;
+	height: 15vh;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background: rgb(67,58,205);
+background: linear-gradient(349deg, rgba(67,58,205,0.49653364763874297) 13%, rgba(31,29,22,0.5777661406359419) 72%);
+border-radius: 10%;
+
+}
+
+.navuli{
+	list-style: none;
+}
+
+.navulia{
+	text-decoration: none;
+	color: white;
+	font-family: monospace;
+	font-size: 30px;
+	font-weight: 1000;
+
+
+}
+.underline{
+	width: 0%;
+	height: 2px;
+	background-color: white;
+	transition: 0.7s;
+
+}
+.navuli:hover .underline{
+		width: 100%;
+}
+
+.navuli:hover{
+	transform: translateX(10px);
+}
+
+#check:checked ~ section label #close{
+	display: block;
+}
+
+#check:checked ~ section label #open{
+	display: none;
+}
+
+#check:checked ~ section nav ul{
+	display: flex;
+	flex-direction: column;
+	height: 60%;
+}
+
+#check:checked ~ section nav {
+	height: 100vh;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+
+@media only screen and (max-width: 1100px){
+	.navul{
+		display: none;
+	}
+	#label{
+		display: block;
+	}
+}
