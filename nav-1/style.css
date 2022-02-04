@@ -1,0 +1,144 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	color: white;
+
+	font-family: initial;
+}
+section{
+	background: url("back.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	background-color: black;
+}
+
+nav{
+	background: black;
+	height: 15vh;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	transition: 1s;
+}
+ul{
+	width: 50%;
+	display: flex;
+	justify-content: space-between;
+	padding-right: 20px;
+	list-style: none;
+	transition: 1s;
+}
+
+nav h1{
+	padding-left: 25px;
+	font-size: 50px;
+	text-decoration: underline;
+}
+
+nav ul li a{
+		text-decoration: none;
+		font-size: 25px;
+		font-family: 'Yanone Kaffeesatz', sans-serif;
+		padding: 30px;
+		transition-duration: 1s;
+		letter-spacing: 2px;
+}
+
+nav ul li a:hover{
+	background-color: #3a4042;
+	border-radius: 50%;
+}
+#logo{
+	transition: 1s;
+}
+#logo:hover{
+	color: deeppink;
+}
+
+label i{
+	font-size: 30px;
+}
+
+label{
+	display: none;
+	padding-right: 20px;
+}
+
+#check{
+	z-index: 3;
+	display: none;
+}
+
+
+/* Responsive */
+
+@media screen and (max-width: 960px){
+	nav ul{
+	
+		display: none;
+
+	}
+	
+
+	label{
+		display: block;
+		cursor: pointer;
+	}
+
+	label i{
+		transition: 0.5s;
+		transition-property: color;
+	}
+
+	label i:hover{
+		color: deeppink;
+	}
+	label .close-btn{
+		display: none;
+	}
+	nav ul li a{
+		font-size: 35px;
+	}
+
+	#check:checked ~ nav ul{
+		display: flex;
+		flex-direction: column;
+		height: 60vh;
+		align-items: center;
+
+	}
+	#check:checked ~ nav{
+		height: 100vh;
+		width: 100%;
+		position: absolute;
+		justify-content: space-around;
+		padding-top: 20px;
+		right: 0px;
+		flex-direction: column;
+		align-items: center;
+
+
+	}
+	#check:checked ~ nav label{
+		right: 10px;
+		top: 30px;
+		position: absolute;
+		
+	}
+
+	#check:checked ~ nav label .menu-btn{
+		display: none;
+	}
+	#check:checked ~ nav label .close-btn{
+		display: block;
+	}
+	
+	#check:checked ~ nav h1 {
+		padding-right: 30px;
+	}
+}

@@ -1,0 +1,104 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+section{
+	background: url("back.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+	width: 100%;
+	transition: 0.5s;
+}
+
+.svg-container{
+	position: sticky;
+
+	z-index: 10;
+	font-size: 50px;
+	color: white;
+
+	float: right;
+	padding: 15px;
+	cursor: pointer;
+	transition: 0.5s;
+}
+
+.svg-container:hover{
+	color: #463441;
+}
+.svg-container .close{
+	display: none;
+}
+
+nav{
+	position: absolute;
+	width: 100%;
+	height: 50vh;
+	background: rgb(238,174,202);
+	background: radial-gradient(circle, rgba(238,174,202,1) 1%, rgba(181,43,86,0.7290266448376226) 64%);
+	display: flex;
+
+	transition: 0.5s;
+	justify-content: center;
+	align-items: center;
+	transform: translateY(-100%);
+}
+
+nav h1{
+
+	font-family: cursive;
+	font-size: 15vw;
+	cursor: pointer;
+	text-decoration: underline;
+	color: white;
+	letter-spacing: 2px;
+	transition: 0.5s;
+}
+
+nav h1:hover{
+	transform: translateX(10px);
+}
+
+nav ul{
+	width: 70%;
+	height: 40%;
+	flex-direction: column;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+nav ul li{
+	list-style: none;
+		transition: 0.5s;
+}
+
+nav ul li a{
+	text-decoration: none;
+	font-family: cursive;
+	color: white;
+	font-size: 25px;
+
+}
+
+nav ul li:hover{
+	transform: translateX(15px);
+}
+
+	#check:checked ~ section nav{
+		transform: translateY(0);
+		height: 100vh;
+}
+
+	#check:checked ~ section label  #open{
+		display: none;
+	}
+	#check:checked ~ section label  .close{
+		display: block;
+	}
+#check{
+	display: none;
+}	

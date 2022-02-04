@@ -1,0 +1,108 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	transition: 1s;
+}
+
+.wolf{
+	font-size: 100px;
+	color: white;
+	cursor: pointer;
+}
+.wolf:hover{
+	transform: translateX(10px);
+	border-bottom: 2px solid white;
+}
+
+header{
+	background: url("back.png");
+	height: 100vh;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+nav{
+	width: 100%;
+	height: 15vh;
+	background: rgb(99,126,222);
+	background: linear-gradient(23deg, rgba(99,126,222,1) 0%, rgba(255,35,202,0.4713235636051295) 99%);
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+}
+nav ul{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 70%;
+}
+
+nav ul li{
+	list-style: none;
+	transition: 0.5s;
+}
+nav ul li a{
+	text-decoration: none;
+	color: white;
+	font-size: 35px;
+	font-family: 'Zen Tokyo Zoo', cursive;
+}
+
+nav ul li:hover{
+	transform: translateX(10px);
+	border-bottom: 2px solid white;
+}
+nav label{
+	display: none;
+	font-size: 60px;
+	color: white;
+	transition: 0.3s;
+
+}
+
+nav label:hover{
+	color: gold;
+	
+}
+
+#check{
+	display: none;
+}
+
+#close{
+	display: none;
+}
+
+#check:checked ~ header nav #open {
+	display: none;
+}
+#check:checked ~ header nav #close {
+	display: block;
+}
+
+#check:checked ~ header nav{
+	height: 100vh;
+	align-items: unset;
+	padding-top: 50px;
+
+
+}
+
+#check:checked ~ header nav ul{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
+@media only screen and (max-width: 900px){
+	nav ul {
+		display: none;
+	}
+	nav label{
+		display: block;
+	}
+}
+
