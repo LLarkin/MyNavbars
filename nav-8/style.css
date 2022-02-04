@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Mai&display=swap');
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+transition: 1s;
+}
+#check{
+	display: none;
+}
+section{
+	height: 100vh;
+	width: 100%;
+	background: url("back.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+}
+.navbar{
+	width: 100%;
+	height: 15vh;
+	background: rgb(0,0,0);
+background: linear-gradient(356deg, rgba(0,0,0,0.5329482134650736) 0%, rgba(0,0,0,0.6617997540813201) 100%);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo{
+	height: 100px;
+	width: 200px;
+	padding-left: 5vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	color: white;
+}
+
+.logo i{
+  font-size: 65px;
+  animation: logo 5s ease-in-out infinite;
+}
+
+@keyframes logo{
+	0%{
+		transform: rotate(0deg);
+	}
+	20%{
+		transform: rotate(90deg);
+	}
+	50%{
+		transform: rotate(180deg);
+	}
+	100%{
+		transform: rotate(270deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+
+.logo h1{
+	font-size: 50px;
+}
+
+.navul{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	height: 100%;
+	width: 70%;
+	font-size: 35px;
+	font-family: 'Yuji Mai', serif;
+}
+
+.navuli{
+	list-style: none;
+}
+
+.navulia{
+	text-decoration: none;
+	color: white;
+}
+.navuli div{
+	height: 2px;
+	width: 0%;
+	background-color: white;
+	transition: 0.5s;
+}
+
+.navuli:hover div{
+	width: 100%;
+}
+
+
+
+/** hamburger menu */ 
+
+
+.hamburger {
+	width: 60px;
+	height: 70px;
+	cursor: pointer;
+	position: absolute;
+	top: 3vh;
+	right: 5vw;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	transform: translateX(-150vw);
+}
+
+.hamburger:hover{
+	transform: rotate(90deg);
+}
+
+.hamburger div{
+	width: 100%;
+	height: 12%;
+	background-color: white;
+}
+#check:checked ~ section label #ham1{
+	display: none;
+}
+#check:checked ~ section label #ham2{
+	transform: rotate(135deg) translateX(25px);
+}
+#check:checked ~ section label #ham3{
+	transform: rotate(-135deg) translateX(25px);
+}
+#check:checked ~ section label .hamburger{
+
+}
+
+#check:checked ~ section .navbar{
+	height: 100vh;
+}
+
+#check:checked ~ section nav .navul{
+	transform: translateX(0%);
+}
+
+
+@media only screen and (max-width: 1000px){
+	.navul{
+		transform: translateX(-250%);
+	}
+	.hamburger{
+		transform: translateX(0vw);
+	}
+
+}
+
+@media only screen and (max-width: 700px){
+	.navul{
+		transform: translateX(-250%);
+	}
+	.hamburger{
+		transform: translateX(0vw);
+		width: 40px;
+		height: 60px;
+	}
+	.navbar{
+		flex-direction: column;
+
+	}
+	.navul{
+		flex-direction: column;
+	}
+	.logo{
+		padding-top: 15px;
+		padding-right: 15vw;
+	}
+
+}
